@@ -6,13 +6,17 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 const App = () => {
   const theme = useTheme();
   return (
-    <SafeAreaView>
-      <Provider>
-        <View style={{flex: 1, backgroundColor: theme.colors.primary}}>
+    <Provider>
+      <SafeAreaView>
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: theme.colors.primary,
+          }}>
           <Text>quiz update checking</Text>
         </View>
-      </Provider>
-    </SafeAreaView>
+      </SafeAreaView>
+    </Provider>
   );
 };
 
