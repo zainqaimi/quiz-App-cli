@@ -1,23 +1,24 @@
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
 import React from 'react';
 import {Provider, useTheme} from 'react-native-paper';
-import {SafeAreaView} from 'react-native-safe-area-context';
+
+import AppNavigation from './src/navigation/AppNavigation';
 
 const App = () => {
   const theme = useTheme();
   return (
     <Provider>
-      <SafeAreaView>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: theme.colors.primary,
-          }}>
-          <Text>quiz update checking</Text>
-        </View>
+      <SafeAreaView style={styles.container}>
+        <AppNavigation />
       </SafeAreaView>
     </Provider>
   );
 };
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // Full height
+  },
+});

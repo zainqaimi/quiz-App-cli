@@ -6,7 +6,7 @@ interface CustomButtonProps {
   icon?: string; // Optional icon name
   mode?: 'text' | 'outlined' | 'contained'; // Mode for the button
   onPress?: () => void; // Function to handle button press
-  color?: string; // Custom color
+  textColor?: string; // Custom color
   disabled?: boolean; // Disabled state
   style?: object; // Custom styles
 }
@@ -16,7 +16,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   icon,
   mode = 'contained', // Default value 'contained'
   onPress,
-  color,
+  textColor,
   disabled = true,
   style = {},
 }) => {
@@ -25,7 +25,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       icon={icon}
       mode={mode}
       onPress={onPress}
-      textColor={color}
+      textColor={textColor}
       disabled={disabled}
       style={style}>
       {text}

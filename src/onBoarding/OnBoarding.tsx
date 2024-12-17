@@ -8,19 +8,20 @@ type OnboardNavProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
 const OnBoarding = () => {
   const navigation = useNavigation<OnboardNavProp>();
   const handleDone = () => {
-    navigation.replace('Login');
+    navigation.replace('Home');
   };
   return (
-    <View>
+    <View style={styles.container}>
       <Text>OnBoarding</Text>
       <CustomButton
         text="Done"
-        icon="correct"
         mode="outlined"
         disabled={false}
         onPress={() => {
-          handleDone;
+          handleDone();
         }}
+        textColor="white"
+        style={styles.btn}
       />
     </View>
   );
@@ -28,4 +29,16 @@ const OnBoarding = () => {
 
 export default OnBoarding;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    backgroundColor: 'yellow',
+  },
+  btn: {
+    width: '100%',
+    backgroundColor: 'green',
+  },
+});
