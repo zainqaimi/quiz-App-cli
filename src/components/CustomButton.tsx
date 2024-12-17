@@ -17,7 +17,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   mode = 'contained', // Default value 'contained'
   onPress,
   textColor,
-  disabled = true,
+  disabled = false,
   style = {},
 }) => {
   return (

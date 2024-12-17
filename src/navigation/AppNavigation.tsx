@@ -1,13 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../utils/types';
 import {NavigationContainer} from '@react-navigation/native';
 import SplashScreen from '../onBoarding/SplashScreen';
 import OnBoarding from '../onBoarding/OnBoarding';
-import Home from '../screens/Home';
+import DrawerNavigation from './DrawerNavigation';
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
+
 const AppNavigation = () => {
   return (
     <NavigationContainer>
@@ -16,11 +15,7 @@ const AppNavigation = () => {
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Splash" component={SplashScreen} />
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-        />
+        <Stack.Screen name="MainDrawer" component={DrawerNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
