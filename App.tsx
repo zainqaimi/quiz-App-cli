@@ -9,7 +9,7 @@ const App = () => {
     <SafeAreaView>
       <Provider>
         <View style={{flex: 1, backgroundColor: theme.colors.primary}}>
-          <Text>quiz</Text>
+          <Text>quiz update checking</Text>
         </View>
       </Provider>
     </SafeAreaView>
