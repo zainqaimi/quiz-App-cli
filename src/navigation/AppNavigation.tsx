@@ -29,13 +29,14 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import SplashScreen from '../onBoarding/SplashScreen';
 import OnBoarding from '../onBoarding/OnBoarding';
+import CustomDrawer from '../components/customDrawer/CustomDrawer';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function DrawerNavigator() {
   return (
-    <Drawer.Navigator screenOptions={{headerShown: false}}>
+    <Drawer.Navigator drawerContent={() => <CustomDrawer label="inbox" />}>
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Profile" component={Profile} />
     </Drawer.Navigator>

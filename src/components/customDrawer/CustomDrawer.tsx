@@ -3,9 +3,9 @@ import {Drawer} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 
 export interface CustomDrawerProps {
-  focusedIcon: string;
-  unfocusedIcon: string;
-  label?: string;
+  label: string;
+  focusedIcon?: string;
+  unfocusedIcon?: string;
   onPress?: () => void;
   style?: {};
 }

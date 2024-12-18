@@ -1,4 +1,5 @@
 import React from 'react';
+import './gesture-handler';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {Provider, useTheme} from 'react-native-paper';
 import AppNavigation from './src/navigation/AppNavigation';
