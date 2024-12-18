@@ -1,9 +1,7 @@
-import {SafeAreaView, StyleSheet} from 'react-native';
 import React from 'react';
+import {SafeAreaView, StyleSheet} from 'react-native';
 import {Provider, useTheme} from 'react-native-paper';
-
 import AppNavigation from './src/navigation/AppNavigation';
-import Home from './src/screens/Home';
 import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {

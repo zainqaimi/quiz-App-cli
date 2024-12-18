@@ -14,7 +14,7 @@ const OnBoarding = () => {
   const navigation = useNavigation<OnboardNavProp>();
 
   const handleDone = () => {
-    navigation.navigate('Main');
+    navigation.replace('Main');
   };
 
   return (
