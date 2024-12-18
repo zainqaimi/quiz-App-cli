@@ -1,13 +1,21 @@
 import React from 'react';
-import {CustomDrawerProps} from '../../utils/types';
 import {Drawer} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
+
+export interface CustomDrawerProps {
+  focusedIcon: string;
+  unfocusedIcon: string;
+  label?: string;
+  onPress?: () => void;
+  style?: {};
+}
 
 const CustomDrawer: React.FC<CustomDrawerProps> = ({
   focusedIcon,
   unfocusedIcon,
   label,
   onPress,
+  style,
 }) => {
   const navigation = useNavigation();
   return (
@@ -16,6 +24,7 @@ const CustomDrawer: React.FC<CustomDrawerProps> = ({
       unfocusedIcon={unfocusedIcon}
       focusedIcon={focusedIcon}
       onPress={onPress}
+      style={style}
     />
   );
 };

@@ -4,13 +4,7 @@ export type RootStackParamList = {
   Login: undefined,
   SignUp: undefined,  
  Home: undefined,
- MainDrawer: undefined
+ Main: undefined
  Profile: undefined
   };
 
-  export interface CustomDrawerProps {
-    focusedIcon: string;
-    unfocusedIcon: string;
-    label?: string;
-    onPress?: () => void;
-  }

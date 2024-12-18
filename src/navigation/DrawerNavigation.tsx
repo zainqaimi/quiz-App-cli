@@ -9,11 +9,7 @@ const Drawer = createDrawerNavigator<RootStackParamList>();
 
 export default function DrawerNavigation() {
   return (
-    <Drawer.Navigator
-      initialRouteName="Home"
-      drawerContent={() => (
-        <CustomDrawer label="Inbox" focusedIcon="inbox" unfocusedIcon="inbox" />
-      )}>
+    <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Profile" component={Profile} />
     </Drawer.Navigator>

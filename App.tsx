@@ -10,12 +10,11 @@ const App = () => {
   const theme = useTheme();
   return (
     <Provider>
-      <SafeAreaView style={styles.container}>
-        <NavigationContainer>
-          {/* <AppNavigation /> */}
-          <Home />
-        </NavigationContainer>
-      </SafeAreaView>
+      <NavigationContainer>
+        <SafeAreaView style={styles.container}>
+          <AppNavigation />
+        </SafeAreaView>
+      </NavigationContainer>
     </Provider>
   );
 };
