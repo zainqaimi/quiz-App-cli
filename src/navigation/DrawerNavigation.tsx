@@ -15,7 +15,7 @@ export default function DrawerNavigation() {
           <CustomDrawer label="profile" focusedIcon="inbox" />
         </>
       )}
-      screenOptions={{headerShown: false}}>
+      screenOptions={{headerShown: false, drawerStyle: {width: '30%'}}}>
       <Drawer.Screen name="Home" component={Home} />
     </Drawer.Navigator>
   );
